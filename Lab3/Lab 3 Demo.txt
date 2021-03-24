@@ -1,0 +1,3 @@
+hadoop fs -rm -r /user/patolia/output
+hadoop jar Sales.jar SalesDriver /user/patolia/input/sales.txt /user/patolia/output/
+hadoop fs -cat /user/patolia/output/part-r-00000

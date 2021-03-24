@@ -1,0 +1,7 @@
+hadoop fs -rm -r /user/patolia/output
+hadoop jar SalesCounter.jar SalesCounterDriver /user/patolia/input/sales.txt /user/patolia/output/
+hadoop fs -cat /user/patolia/output/part-r-00000
+
+
+
+Java version was much faster

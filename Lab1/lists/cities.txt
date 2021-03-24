@@ -1,0 +1,240 @@
+Tower, 55790, MN
+Sacramento, 95826, CA
+Palm Coast, 32164, FL
+Tomahawk, 54487, WI
+Richmond, 94801, CA
+San Francisco, 94110, CA
+Ripon, 95366, CA
+Brooklyn, 11222, NY
+Ledbetter, 42058, KY
+Chico, 95973, CA
+Farmington Hills, 48331, MI
+Paris, 75460, TX
+Quincy, 02169, MA
+Philadelphia, 19148, PA
+Fremont, 94538, CA
+Anaheim, 92806, CA
+Cape Coral, 33990, FL
+Fort Worth, 76132, TX
+Dayton, 45459, OH
+Shreveport, 71118, LA
+Virginia Beach, 23464, VA
+Long Beach, 90813, CA
+Artesia, 90701, CA
+San Diego, 92111, CA
+Ottawa, 61350, IL
+Great Falls, 59404, MT
+Pontiac, 48340, MI
+Shreveport, 71118, LA
+Manassas, 20110, VA
+San Jose, 95125, CA
+West Palm Beach, 33417, FL
+Altadena, 91001, CA
+Fremont, 68025, NE
+Garretson, 57030, SD
+Seneca, 61360, IL
+Great Falls, 59404, MT
+Fairfax, 22033, VA
+Saint Paul, 55123, MN
+Riverside, 92503, CA
+Modesto, 95358, CA
+Haltom City, 76137, TX
+Dallas, 75231, TX
+Seneca, 61360, IL
+White Sulphur Springs, 59645, MT
+Ferndale, 48220, MI
+Cerritos, 90703, CA
+Branchport, 14418, NY
+Pompton Lakes, 07442, NJ
+Indio, 92201, CA
+Naples, 34102, FL
+Bremerton, 98312, WA
+Cedar Hill, 75104, TX
+Burtonsville, 20866, MD
+Albany, 12209, NY
+El Paso, 79930, TX
+Houston, 77005, TX
+Chesterfield, 63017, MO
+Paducah, 42001, KY
+Renton, 98059, WA
+Tomahawk, 54487, WI
+San Jose, 95116, CA
+Pomona, 91766, CA
+Mission Viejo, 92691, CA
+Mineola, 75773, TX
+Bellevue, 68123, NE
+Morris, 60450, IL
+Desert Hot Springs, 92241, CA
+Keene, 03431, NH
+Wilkesboro, 28697, NC
+Tacoma, 98443, WA
+Lynden, 98264, WA
+Apple Valley, 92307, CA
+Albuquerque, 87111, NM
+Paducah, 42001, KY
+Waterford, 48327, MI
+North Brunswick, 08902, NJ
+Laguna Hills, 92653, CA
+Columbus, 31909, GA
+Jackson Heights, 11372, NY
+Lakewood, 90712, CA
+Sherman, 57030, SD
+Duluth, 55807, MN
+Dayton, 45459, OH
+White Lake, 48383, MI
+Monterey Park, 91755, CA
+Enid, 73703, OK
+South Richmond Hill, 11419, NY
+Yorba Linda, 92887, CA
+El Paso, 79925, TX
+Reno, 75462, TX
+West Des Moines, 50265, IA
+Council Bluffs, 51503, IA
+Hugoton, 67951, KS
+Philadelphia, 19141, PA
+Delmar, 12054, NY
+Monrovia, 91016, CA
+Tucson, 85748, AZ
+Orangevale, 95662, CA
+Satsuma, 32189, FL
+Tampa, 33629, FL
+Sparks Glencoe, 21152, MD
+Seneca, 29678, SC
+Beecher, 60401, IL
+Sunnyside, 98944, WA
+Eau Claire, 54703, WI
+Orangevale, 95662, CA
+Duluth, 55810, MN
+Hermantown, 55811, MN
+Conroe, 77304, TX
+Kent, 98030, WA
+Santa Rosa, 95407, CA
+Morgan Hill, 95037, CA
+Los Angeles, 90026, CA
+Richmond, 02892, RI
+Caldwell, 83605, ID
+Seattle, 98133, WA
+Carlsbad, 92008, CA
+Ceres, 95307, CA
+Santa Rosa, 95407, CA
+Arlington, 22204, VA
+Greenfield, 01301, MA
+Great Falls, 59405, MT
+Paducah, 42001, KY
+Quinlan, 75474, TX
+Salina, 67401, KS
+Lebanon, 37087, TN
+Munster, 46321, IN
+Bradenton, 34207, FL
+Ottawa, 61350, IL
+Newark, 60541, IL
+Tomahawk, 54487, WI
+Newman Lake, 99025, WA
+Berkeley, 94703, CA
+Westminster, 92683, CA
+Crestwood, 60445, IL
+Custer, 98240, WA
+Pewaukee, 53072, WI
+Newark, 60541, IL
+Venus, 76084, TX
+Loveland, 80538, CO
+Syracuse, 13210, NY
+San Jose, 95122, CA
+Amarillo, 79102, TX
+San Diego, 92117, CA
+Lansford, 58750, ND
+Seneca, 61360, IL
+Paducah, 42003, KY
+Southgate, 48195, MI
+Wichita, 67203, KS
+Palos Heights, 60463, IL
+La Center, 98629, WA
+Matteson, 60443, IL
+Tomball, 77375, TX
+Dekalb, 60115, IL
+Saginaw, 48603, MI
+Cincinnati, 45238, OH
+Riverdale, 30274, GA
+Rosendale, 54974, WI
+Des Plaines, 60018, IL
+Riverside, 08075, NJ
+Johannesburg, 49751, MI
+Sister Bay, 54234, WI
+Minneapolis, 55436, MN
+Mesquite, 75150, TX
+Long Beach, 90805, CA
+Lutz, 33558, FL
+Riverdale, 60827, IL
+Bronx, 10459, NY
+Saint Louis, 63125, MO
+Evansville, 47712, IN
+West Bend, 53090, WI
+Louisville, 40205, KY
+Philadelphia, 19148, PA
+Fair Oaks, 95628, CA
+Austin, 78745, TX
+Novato, 94945, CA
+Newman Lake, 99025, WA
+Montclair, 07042, NJ
+Hope, 71801, AR
+Virginia Beach, 23464, VA
+Bridgeport, 06604, CT
+Elmendorf, 78112, TX
+Fremont, 94538, CA
+Anaheim, 92804, CA
+Ottawa, 61350, IL
+Merrill, 54452, WI
+Willows, 95988, CA
+Paducah, 42001, KY
+Springfield, 62704, IL
+San Antonio, 78240, TX
+Orland Park, 60462, IL
+Vienna, 22182, VA
+Pleasanton, 94588, CA
+Minneapolis, 55420, MN
+Denver, 80206, CO
+Louisville, 40202, KY
+Salinas, 93907, CA
+High Falls, 12440, NY
+Lansing, 60438, IL
+Chicago, 60616, IL
+Lutz, 33549, FL
+Tomahawk, 54487, WI
+Middletown, 19709, DE
+Andover, 55304, MN
+Lowell, 01851, MA
+Etiwanda, 91739, CA
+Carson, 90746, CA
+Ewing, 08618, NJ
+Casselberry, 32707, FL
+Owatonna, 55060, MN
+Hickory, 42051, KY
+Bellevue, 98004, WA
+Middlebury, 05753, VT
+Englewood, 34223, FL
+Jamestown, 95327, CA
+Corte Madera, 94925, CA
+Naples, 34102, FL
+Salem, 01970, MA
+Providence, 02903, RI
+Chico, 95927, CA
+Sikeston, 63801, MO
+Murrieta, 92562, CA
+Martinez, 94553, CA
+Los Angeles, 90031, CA
+Taylor, 48180, MI
+Chicago, 60613, IL
+Paris, 75460, TX
+Paducah, 42003, KY
+Cumberland, 02864, RI
+Alsip, 60803, IL
+Moreno Valley, 92557, CA
+Houston, 77099, TX
+Plattsburgh, 12901, NY
+Chicago, 60640, IL
+Lake Charles, 70601, LA
+Santa Ana, 92705, CA
+Salt Lake City, 84119, UT
+Jamestown, 95327, CA
+Orland Park, 60462, IL
+Everett, 98204, WA

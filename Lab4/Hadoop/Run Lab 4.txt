@@ -1,0 +1,4 @@
+
+hadoop fs -rm -r /user/patolia/output
+hadoop jar Driver.jar Driver 10 /user/patolia/input/product.txt /user/patolia/output/
+hadoop fs -cat /user/patolia/output/part-r-00000
