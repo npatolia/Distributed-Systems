@@ -1,0 +1,101 @@
+Author: Nikhil Patolia
+
+Part1:
+
+import scala.io._
+import org.apache.spark.{ SparkConf, SparkContext }
+import org.apache.spark.rdd._
+import org.apache.log4j.Logger
+import org.apache.log4j.Level
+import scala.collection._
+
+object Part1 {
+
+  def main(args: Array[String]): Unit = {
+    Logger.getLogger("org").setLevel(Level.OFF)
+    Logger.getLogger("akka").setLevel(Level.OFF)
+    System.setProperty("hadoop.home.dir", "c:/winutils/")
+
+    val fileLines = Source.fromFile("input.txt").getLines.toList
+    println(fileLines.count(_.toInt % 3 == 0))
+  }
+}
+
+
+
+
+Part 2:
+
+import scala.io._
+import org.apache.spark.{ SparkConf, SparkContext }
+import org.apache.spark.rdd._
+import org.apache.log4j.Logger
+import org.apache.log4j.Level
+import scala.collection._
+
+object Part2 {
+
+  def printMaxTemp(s:String): Unit = {
+    val tokens = s.split(" ")
+    val temps = tokens.tail.map(_.toInt)
+    
+    print(tokens(0) + " ")
+    println(temps.max)
+  }
+
+  def main(args: Array[String]): Unit = {
+    Logger.getLogger("org").setLevel(Level.OFF)
+    Logger.getLogger("akka").setLevel(Level.OFF)
+
+    System.setProperty("hadoop.home.dir", "c:/winutils/")
+    val fileLines = Source.fromFile("input.txt").getLines.toList
+
+    fileLines.foreach(printMaxTemp(_))
+  }
+}
+
+
+Part 3:
+
+import scala.io._
+import org.apache.spark.{ SparkConf, SparkContext }
+import org.apache.spark.rdd._
+import org.apache.log4j.Logger
+import org.apache.log4j.Level
+import scala.collection._
+import scala.collection.immutable.ListMap
+
+object Part3 {
+
+  def printMaxTemp(s:String): Unit = {
+    val tokens = s.split(" ")
+    val temps = tokens.tail.map(_.toInt)
+
+    print(tokens(0) + " ")
+    println(temps.max)
+  }
+
+  def main(args: Array[String]): Unit = {
+    Logger.getLogger("org").setLevel(Level.OFF)
+    Logger.getLogger("akka").setLevel(Level.OFF)
+
+    System.setProperty("hadoop.home.dir", "c:/winutils/")
+    val fileLines = Source.fromFile("input.txt").getLines.toList
+    var entries = new scala.collection.mutable.HashMap[String, Set[(String, String)]]
+
+    for (eachLine <- fileLines){
+      val tokens = eachLine.split(",")
+      if (entries isDefinedAt tokens(0) + "," + tokens(1)){
+        entries(tokens(0) + "," + tokens(1)) += ((tokens(2).trim, tokens(3).trim))
+      } else {
+        entries += (tokens(0) + "," + tokens(1) -> Set((tokens(2).trim, tokens(3).trim)))
+      }
+    }
+
+    val sortedEntries = ListMap(entries.toSeq.sortBy(_._1):_*)
+    for ((k,v) <- sortedEntries){
+      val sortedClasses = v.toList.sortBy(_._1)
+      println(k, sortedClasses.mkString(", "))
+    }
+  }
+}

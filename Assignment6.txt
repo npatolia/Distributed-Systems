@@ -1,0 +1,184 @@
+Part 1 
+
+import org.apache.log4j.{Level, Logger}
+import org.apache.spark.{SparkConf, SparkContext}
+
+object Part1 {
+
+  def main(args: Array[String]): Unit = {
+    Logger.getLogger("org").setLevel(Level.OFF)
+    Logger.getLogger("akka").setLevel(Level.OFF)
+    System.setProperty("hadoop.home.dir", "c:/winutils/")
+
+    System.setProperty("hadoop.home.dir", "c:/winutils/")
+    val conf = new SparkConf().setAppName("App").setMaster("local[4]")
+    val sc = new SparkContext(conf)
+
+    val studentLines = sc.textFile("students.txt")
+    val students = studentLines.map(line => (line.split(",")(0).trim().toInt,
+      line.split(",")(1).trim()))
+
+    val classLines = sc.textFile("classes.txt")
+    val classes = classLines.map(line => (line.split(",")(0).trim(),
+      line.split(",")(1).trim().toInt))
+
+    val gradeLines = sc.textFile("grades.txt")
+    val grades = gradeLines.map(line => (line.split(",")(0).trim().toInt,
+      (line.split(",")(1).trim(),
+        line.split(",")(2).trim())))
+
+    val hardestClass = classes.values.max
+    val classesFiltered = classes.filter(_._2==hardestClass)
+    val gradesRemap = grades.map({case (studentID,(course,grade)) => (course, studentID)})
+    val gradesJoinClasses = classesFiltered.join(gradesRemap)
+    val joinRemap = gradesJoinClasses.map({case (course, (dificulty, studentID)) => (studentID, dificulty)})
+    val studJoinHardClass = students.join(joinRemap)
+    studJoinHardClass.foreach(x => println(x._2._1))
+  }
+  
+}
+
+=======================================================================================================================
+Part 2
+
+import org.apache.log4j.{Level, Logger}
+import org.apache.spark.{SparkConf, SparkContext}
+
+object Part2 {
+
+  def main(args: Array[String]): Unit = {
+    Logger.getLogger("org").setLevel(Level.OFF)
+    Logger.getLogger("akka").setLevel(Level.OFF)
+    System.setProperty("hadoop.home.dir", "c:/winutils/")
+
+    System.setProperty("hadoop.home.dir", "c:/winutils/")
+    val conf = new SparkConf().setAppName("App").setMaster("local[4]")
+    val sc = new SparkContext(conf)
+
+    val studentLines = sc.textFile("students.txt")
+    val students = studentLines.map(line => (line.split(",")(0).trim().toInt,
+      line.split(",")(1).trim()))
+
+    val classLines = sc.textFile("classes.txt")
+    val classes = classLines.map(line => (line.split(",")(0).trim(),
+      line.split(",")(1).trim().toInt))
+
+    val gradeLines = sc.textFile("grades.txt")
+    val grades = gradeLines.map(line => (line.split(",")(0).trim().toInt,
+      (line.split(",")(1).trim(),
+        line.split(",")(2).trim())))
+
+    val classJoinName = students.join(grades).map({case (studentID, (name, (course, grade))) => (course, name)})
+    val nameWithDifficulty = classJoinName.join(classes).map({case (course, (name, dificulty)) => (name, dificulty)})
+    val sums = nameWithDifficulty.reduceByKey((x,y) => x+y)
+    val counts = sc.parallelize(nameWithDifficulty.countByKey().toSeq)
+    val averages = sums.join(counts).map({case (name, (sum, count)) => (name, sum.toFloat / count)})
+
+    averages.foreach(x=> println(x._1 + ", " + "%.2f".format(x._2)))
+  }
+
+}
+
+=======================================================================================================================
+Part 3
+
+import org.apache.log4j.{Level, Logger}
+import org.apache.spark.{SparkConf, SparkContext}
+
+object Part3 {
+
+  def main(args: Array[String]): Unit = {
+    Logger.getLogger("org").setLevel(Level.OFF)
+    Logger.getLogger("akka").setLevel(Level.OFF)
+    System.setProperty("hadoop.home.dir", "c:/winutils/")
+
+    System.setProperty("hadoop.home.dir", "c:/winutils/")
+    val conf = new SparkConf().setAppName("App").setMaster("local[4]")
+    val sc = new SparkContext(conf)
+
+    val studentLines = sc.textFile("students.txt")
+    val students = studentLines.map(line => (line.split(",")(0).trim().toInt,
+      line.split(",")(1).trim()))
+
+    val classLines = sc.textFile("classes.txt")
+    val classes = classLines.map(line => (line.split(",")(0).trim(),
+      line.split(",")(1).trim().toInt))
+
+    val gradeLines = sc.textFile("grades.txt")
+    val grades = gradeLines.map(line => (line.split(",")(0).trim().toInt,
+      (line.split(",")(1).trim(),
+        line.split(",")(2).trim())))
+
+    val classesSorted = classes.sortBy(_._2)
+    val topFive = classesSorted.take((5))
+    topFive.foreach(entry => println(entry._1))
+  }
+}
+
+=======================================================================================================================
+Part 4
+
+import org.apache.log4j.{Level, Logger}
+import org.apache.spark.{SparkConf, SparkContext}
+
+object Part4 {
+
+  def main(args: Array[String]): Unit = {
+    Logger.getLogger("org").setLevel(Level.OFF)
+    Logger.getLogger("akka").setLevel(Level.OFF)
+    System.setProperty("hadoop.home.dir", "c:/winutils/")
+
+    System.setProperty("hadoop.home.dir", "c:/winutils/")
+    val conf = new SparkConf().setAppName("App").setMaster("local[4]")
+    val sc = new SparkContext(conf)
+
+    val studentLines = sc.textFile("students.txt")
+    val students = studentLines.map(line => (line.split(",")(0).trim().toInt,
+      line.split(",")(1).trim()))
+
+    val classLines = sc.textFile("classes.txt")
+    val classes = classLines.map(line => (line.split(",")(0).trim(),
+      line.split(",")(1).trim().toInt))
+
+    val gradeLines = sc.textFile("grades.txt")
+    val grades = gradeLines.map(line => (line.split(",")(0).trim().toInt,
+      (line.split(",")(1).trim(),
+        line.split(",")(2).trim())))
+
+    val gradesConverted = grades.map({case (studentID, (course, grade)) => (studentID, convertGrade(grade))})
+
+    val sums = gradesConverted.reduceByKey((x,y) => x+y)
+    val counts = sc.parallelize(gradesConverted.countByKey().toSeq)
+
+    val averages = sums.join(counts).map({case (name, (sum, count)) => (name, sum.toFloat / count)})
+
+
+    val nameAndGrades = students.leftOuterJoin(averages).map({
+      case (studentID,(name,Some(gpa))) => (name, gpa)
+      case (studentID,(name,None)) => (name, 0.toFloat)
+    })
+
+    val sorted = nameAndGrades.sortBy(_._2, false).collect().toList
+
+    sorted.foreach(x=> println(x._1 + ", " + "%.1f".format(x._2)))
+
+  }
+
+
+  //.map({case (studentID,(name,(course,grade))) => (name, grade)})
+
+  def convertGrade(letterGrade : String) : Int = {
+    if (letterGrade.equals("A")){
+      return 4
+    } else if (letterGrade.equals("B")){
+      return 3
+    } else if (letterGrade.equals("C")){
+      return 2
+    } else if (letterGrade.equals("D")){
+      return 1
+    }
+
+    return 0
+  }
+
+}
